@@ -5,3 +5,6 @@ CREATE TABLE entry_table(
     liked VARCHAR(500),
     disliked VARCHAR(500)
 );
+
+
+SELECT * FROM entry_table;
