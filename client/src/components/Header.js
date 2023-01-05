@@ -1,7 +1,7 @@
 import React from 'react';
 import './Header.css'
 export default function Header(){
-    const current = new Date();
+    let current = new Date();
     let date = `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`;
     const months = [
         'January',
