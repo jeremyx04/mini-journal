@@ -26,10 +26,8 @@ export default function Header(){
         };
     };
     return(
-        <div className='titlebox'>
-            <div className='title'>
-                {parse(date).month + " " + parse(date).day + " " + parse(date).year}
-            </div>
+        <div className='title'>
+            {parse(date).month + " " + parse(date).day + " " + parse(date).year}
         </div>
     )
 }
