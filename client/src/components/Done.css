@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+
+body {
+    background: #FFF;
+    font-family: 'Noto Sans JP', sans-serif;
+    font-weight: 400;
+  }
+
+.btn{
+    letter-spacing: 0.05em;
+    cursor: pointer;
+    font-size: 26px;
+    font-weight: 400;
+    font-family: 'PT Sans Narrow', sans-serif;
+    line-height: 45px;
+    max-width: 160px;
+    position: relative;
+    text-decoration: none;
+    text-transform: uppercase;
+    width: 100%;
+    text-align:center;
+}
+
+a{
+    color: black;
+    text-decoration: none;
+    background-color: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

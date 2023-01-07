@@ -21,7 +21,7 @@ export default function Header(){
         let arr = date.split('/');
         return {    
             day: arr[0],
-            month: months[arr[1]],
+            month: months[arr[1]-1],
             year: arr[2]
         };
     };
