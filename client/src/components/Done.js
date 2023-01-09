@@ -10,7 +10,8 @@ export default function Done(props){
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
                    liked: props.liked,
-                   disliked: props.disliked
+                   disliked: props.disliked, 
+                   date: props.date
                 })
             });
             console.log(response);

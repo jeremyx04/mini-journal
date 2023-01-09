@@ -8,9 +8,9 @@ app.use(express.json());
 
 app.post('/entrys', async(req, res) => {
     try{
-        const { liked, disliked } = req.body;
-        const newEntry = await pool.query('INSERT INTO entry_table(liked, disliked) VALUES($1,$2) RETURNING *',
-        [liked,disliked]);
+        const { liked, disliked, date} = req.body;
+        const newEntry = await pool.query('INSERT INTO entry_table(liked, disliked, date) VALUES($1,$2,$3) RETURNING *',
+        [liked,disliked,date]);
         res.json(newEntry.rows[0]);
     } catch (err){
         console.log(err.message);
@@ -39,9 +39,9 @@ app.get('/entrys/:id', async(req, res) => {
 app.put('/entrys/:id', async(req, res) => {
     try{
         const { id } = req.params;
-        const { liked, disliked } = req.body;
-        const updateEntry = await pool.query('UPDATE entry_table SET liked = $1, disliked = $2 WHERE id = $3',
-        [liked, disliked, id]);
+        const { liked, disliked, date} = req.body;
+        const updateEntry = await pool.query('UPDATE entry_table SET liked = $1, disliked = $2, date = $3 WHERE id = $4',
+        [liked, disliked, date, id]);
         res.json('Updated ' + id);
     }catch (err){
         console.log(err.message);

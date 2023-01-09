@@ -1,13 +1,13 @@
 import React from 'react';
-import './Journal.css';
+import './Home.css';
 import Header from './Header';
-import JournalBox from './JournalBox';
+import List from './List';
 
-export default function Journal(){
+export default function Home(){
     return(
         <div className='titlebox'>     
             <Header/>
-            <JournalBox/>
+            <List/>
         </div>
     )
 }
