@@ -6,24 +6,30 @@ import Journal from './components/Journal';
 
 function App() {
   const [entrys, setEntrys] = useState([]);
-  const [routes, setRoutes] = useState([1,2,3]);
+  const [routes, setRoutes] = useState([]);
   const getEntrys = async () => {
     try{
         const res = await fetch('http://localhost:5000/entrys');
         const data = await res.json();
         setEntrys(data);
+        let arr = [];
+        for(let i = 0; i < entrys.length; i++){
+          arr.push(entrys[i].id);
+        }
+        setRoutes(arr);
     } catch(err) {
         console.log(err.message);
     }
 }
   useEffect(() => {
     getEntrys();
-  })
+  },[entrys])
+
   return (
     <Routes>
-      <Route path = '/' element={<Home />} />
+      <Route path = '/' element={<Home entrys={entrys}/>} />
       {routes.map((id) => {
-        return <Route path = {`/${id}`} element={<h1> hello {id} </h1>} />
+        return <Route path = {`/${id}`} element={<Journal id={id}/>} />
       })}
     </Routes>
   );

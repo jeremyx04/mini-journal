@@ -3,11 +3,11 @@ import './Journal.css';
 import Header from './Header';
 import JournalBox from './JournalBox';
 
-export default function Journal(){
+export default function Journal(props){
     return(
         <div className='titlebox'>     
             <Header/>
-            <JournalBox/>
+            <JournalBox id={props.id}/>
         </div>
     )
 }

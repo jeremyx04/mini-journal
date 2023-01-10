@@ -20,7 +20,7 @@ export default function List(){
     return(
         <div>
             {entrys.map(entry => (
-                <button className='listbox'>{entry.date} </button>
+                <button className='listbox'> {entry.date} </button>
             ))}
         </div>
     )

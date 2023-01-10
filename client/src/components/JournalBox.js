@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './JournalBox.css'
 import Entry from './Entry';
 import Done from './Done';
 
-export default function JournalBox(){
+export default function JournalBox(props){
     let current = new Date();
     let date = `${current.getDate()}/${current.getMonth()+1}/${current.getFullYear()}`;
     const months = [
@@ -30,12 +30,27 @@ export default function JournalBox(){
     };
     const [liked, setLiked] = useState('');
     const [disliked, setDisliked] = useState('');
+    const getEntry = async (id) => {
+        try{
+            const res = await fetch('http://localhost:5000/entrys/' + id);
+            const data = await res.json();
+            await setLiked(data[0].liked);
+            await setDisliked(data[0].disliked);
+        } catch(err) {
+            console.log(err.message);
+        }
+    }
     const onChangeLiked = (e1) => {
         setLiked(e1.target.value);
     }
     const onChangeDisliked = (e2) => {
         setDisliked(e2.target.value);
     }
+
+    useEffect(() => {
+        getEntry(props.id);
+    },[]);
+
     return(
         <div className='journal'>
             What is something you liked today?
