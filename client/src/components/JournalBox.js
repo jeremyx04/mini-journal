@@ -50,14 +50,16 @@ export default function JournalBox(props){
     useEffect(() => {
         getEntry(props.id);
     },[]);
-
+    useEffect(() => {
+        console.log(liked,disliked);
+    },[liked,disliked]);
     return(
         <div className='journal'>
             What is something you liked today?
             <Entry txt={liked} onChange={onChangeLiked}/>
             What is something you disliked today?
             <Entry txt={disliked} onChange={onChangeDisliked}/>
-            <Done liked={liked} disliked={disliked} date={parse(date).month + " " + parse(date).day + " " + parse(date).year}/>
+            <Done liked={liked} disliked={disliked} id={props.id} date={parse(date).month + " " + parse(date).day + " " + parse(date).year}/>
         </div>
     )
 }

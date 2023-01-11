@@ -12,7 +12,9 @@ export default function List(){
             console.log(err.message);
         }
     }
+    const handleClick = async () => {
 
+    }
     useEffect(() => {
         getEntrys();
     },[]);
@@ -20,7 +22,7 @@ export default function List(){
     return(
         <div>
             {entrys.map(entry => (
-                <button className='listbox'> {entry.date} </button>
+                <a href={"http://localhost:3000/"+entry.id} className='listbox'> {entry.date} </a>
             ))}
         </div>
     )

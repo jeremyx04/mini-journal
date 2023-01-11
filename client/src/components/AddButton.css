@@ -1,0 +1,14 @@
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
+
+.btn{
+    letter-spacing: 0.05em;
+    font-size: 10px;
+    font-weight: 400;
+    font-family: 'PT Sans Narrow', sans-serif;
+    line-height: 45px;
+    position: relative;
+    text-decoration: none;
+    width: 100%;
+    text-align:center;
+    margin-top: 25px;
+}

@@ -5,4 +5,9 @@
     height: 95vh;
     margin: 30px;
   }
-  
+
+.background{
+  background-color: #a29bfe;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}

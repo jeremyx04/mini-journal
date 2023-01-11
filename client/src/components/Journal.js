@@ -5,9 +5,11 @@ import JournalBox from './JournalBox';
 
 export default function Journal(props){
     return(
-        <div className='titlebox'>     
-            <Header/>
-            <JournalBox id={props.id}/>
+        <div className='background'>
+            <div className='titlebox'>     
+                <Header/>
+                <JournalBox id={props.id}/>
+            </div>
         </div>
     )
 }
