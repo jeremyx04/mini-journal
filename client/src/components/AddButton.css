@@ -1,8 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=PT+Sans+Narrow&display=swap');
 
-.btn{
+.addbtn{
     letter-spacing: 0.05em;
-    font-size: 10px;
+    font-size: 25px;
     font-weight: 400;
     font-family: 'PT Sans Narrow', sans-serif;
     line-height: 45px;
@@ -10,5 +10,10 @@
     text-decoration: none;
     width: 100%;
     text-align:center;
-    margin-top: 25px;
+    margin-top: 40px;
+    transition: color .3s ease-in-out, box-shadow .3s ease-in-out;
 }
+
+.addbtn:hover {
+    color: #5352ed;
+  }

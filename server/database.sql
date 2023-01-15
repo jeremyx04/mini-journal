@@ -1,4 +1,4 @@
-CREATE TABLE table_name (
+CREATE TABLE entry_table (
     id int,
     liked varchar(1000),
     disliked varchar(1000),

@@ -12,9 +12,6 @@ export default function List(){
             console.log(err.message);
         }
     }
-    const handleClick = async () => {
-
-    }
     useEffect(() => {
         getEntrys();
     },[]);

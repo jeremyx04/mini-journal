@@ -14,7 +14,8 @@ function App() {
         setEntrys(data);
         let arr = [];
         for(let i = 0; i < entrys.length; i++){
-          arr.push(entrys[i].id);
+          arr.push({"id":entrys[i].id,
+                    "date":entrys[i].date});
         }
         setRoutes(arr);
     } catch(err) {
@@ -28,8 +29,8 @@ function App() {
   return (
     <Routes>
       <Route path = '/' element={<Home entrys={entrys}/>} />
-      {routes.map((id) => {
-        return <Route path = {`/${id}`} element={<Journal id={id}/>} />
+      {routes.map((entry) => {
+        return <Route path = {`/${entry.id}`} element={<Journal id={entry.id} date={entry.date}/>} />
       })}
     </Routes>
   );

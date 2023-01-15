@@ -13,7 +13,7 @@ export default function Done(props){
     const handleClick = async() =>{
         try{
             let res = await getEntry(props.id);
-            console.log(props.date);
+            //console.log(props.date);
             if(!res){
                 const response = await fetch('http://localhost:5000/entrys', 
                 {

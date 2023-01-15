@@ -7,7 +7,7 @@ export default function Journal(props){
     return(
         <div className='background'>
             <div className='titlebox'>     
-                <Header/>
+                <Header date={props.date}/>
                 <JournalBox id={props.id}/>
             </div>
         </div>

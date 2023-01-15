@@ -56,6 +56,6 @@ export default function AddButton(){
         }
     }
     return (
-        <a className='aaa' onClick={handleClick}> <div className='btn'> add new entry </div> </a>
+        <a onClick={handleClick}> <div className='addbtn'> add today's entry </div> </a>
     )
 }
