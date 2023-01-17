@@ -17,7 +17,13 @@ function App() {
           arr.push({"id":entrys[i].id,
                     "date":entrys[i].date});
         }
-        setRoutes(arr);
+       
+        console.log(arr);
+        if(arr.length != routes.length){
+
+          setRoutes(arr);
+
+        }
     } catch(err) {
         console.log(err.message);
     }

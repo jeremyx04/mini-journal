@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './List.css';
 
-export default function List(){
+export default function List(){ 
     const [entrys, setEntrys] = useState([]);
     const getEntrys = async () => {
         try{
